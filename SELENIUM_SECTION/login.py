@@ -9,7 +9,7 @@ import time
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 driver.get("https://practicetestautomation.com/practice-test-login/")
 
-# $x("//tag[@attribute='value']")
+# xpath $x("//tag[@attribute='value']")
 
 username_locator = driver.find_element(By.ID, "username")
 username_locator.send_keys("student")
