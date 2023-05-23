@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Python 3.6.3 on darwin)" generated="20171112 22:18:10.729">
+<suite id="s1" name="Calculate Discount" source="/Users/akinfu/Google Drive/PROJECTS/UDEMY/RobotFrameworkQuickStart/RobotCourseFiles/DemoStoreSuperSQA/tests/Coupons/calculate_discount.robot">
+<test id="s1-t1" name="Coupon should be applied correctly">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://demostore.supersqa.com</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20171112 22:18:11.031" level="INFO">Opening browser 'Chrome' to base url 'http://demostore.supersqa.com'</msg>
+<status status="PASS" starttime="20171112 22:18:11.030" endtime="20171112 22:18:16.544"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${first item add to cart locator}</arg>
+</arguments>
+<msg timestamp="20171112 22:18:16.546" level="INFO">Clicking link '//*[@id="main"]/div[2]/ul/li[1]/a[2]'.</msg>
+<status status="PASS" starttime="20171112 22:18:16.545" endtime="20171112 22:18:16.840"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20171112 22:18:17.842" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20171112 22:18:16.841" endtime="20171112 22:18:17.842"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${second item add to cart locator}</arg>
+</arguments>
+<msg timestamp="20171112 22:18:17.843" level="INFO">Clicking link '//*[@id="main"]/div[2]/ul/li[2]/a[2]'.</msg>
+<status status="PASS" starttime="20171112 22:18:17.842" endtime="20171112 22:18:17.945"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20171112 22:18:18.946" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20171112 22:18:17.945" endtime="20171112 22:18:18.947"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${to to cart button locator}</arg>
+</arguments>
+<msg timestamp="20171112 22:18:18.948" level="INFO">Clicking link '//*[@id="menu-item-159"]/a'.</msg>
+<status status="PASS" starttime="20171112 22:18:18.947" endtime="20171112 22:18:19.945"></status>
+</kw>
+<kw name="Get a valid coupon" library="demostore.coupons.Coupons">
+<assign>
+<var>${valid coupon}</var>
+</assign>
+<msg timestamp="20171112 22:18:19.948" level="INFO">${valid coupon} = {'code': '90off', 'discount': 90}</msg>
+<status status="PASS" starttime="20171112 22:18:19.946" endtime="20171112 22:18:19.948"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${valid coupon}.get("code")</arg>
+</arguments>
+<assign>
+<var>${code}</var>
+</assign>
+<msg timestamp="20171112 22:18:19.949" level="INFO">${code} = 90off</msg>
+<status status="PASS" starttime="20171112 22:18:19.948" endtime="20171112 22:18:19.949"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${valid coupon}.get("discount")</arg>
+</arguments>
+<assign>
+<var>${discount percent}</var>
+</assign>
+<msg timestamp="20171112 22:18:19.950" level="INFO">${discount percent} = 90</msg>
+<status status="PASS" starttime="20171112 22:18:19.950" endtime="20171112 22:18:19.951"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${cart total locator}</arg>
+</arguments>
+<assign>
+<var>${total before coupon}</var>
+</assign>
+<msg timestamp="20171112 22:18:20.046" level="INFO">${total before coupon} = $30.00</msg>
+<status status="PASS" starttime="20171112 22:18:19.951" endtime="20171112 22:18:20.047"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Total before coupon is: ${total before coupon}</arg>
+<arg>console=true</arg>
+</arguments>
+<msg timestamp="20171112 22:18:20.048" level="INFO">Total before coupon is: $30.00</msg>
+<status status="PASS" starttime="20171112 22:18:20.047" endtime="20171112 22:18:20.048"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${coupon field locator}</arg>
+<arg>${code}</arg>
+</arguments>
+<msg timestamp="20171112 22:18:20.049" level="INFO">Typing text '90off' into text field 'id=coupon_code'</msg>
+<status status="PASS" starttime="20171112 22:18:20.049" endtime="20171112 22:18:20.431"></status>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${coupon field locator}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" starttime="20171112 22:18:20.433" endtime="20171112 22:18:20.542"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>class=woocommerce-message</arg>
+</arguments>
+<assign>
+<var>${success message}</var>
+</assign>
+<msg timestamp="20171112 22:18:20.963" level="INFO">${success message} = Coupon code applied successfully.</msg>
+<status status="PASS" starttime="20171112 22:18:20.542" endtime="20171112 22:18:20.963"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${success message}</arg>
+<arg>Coupon code applied successfully.</arg>
+</arguments>
+<status status="PASS" starttime="20171112 22:18:20.964" endtime="20171112 22:18:20.965"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20171112 22:18:21.968" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20171112 22:18:20.966" endtime="20171112 22:18:21.968"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${cart total locator}</arg>
+</arguments>
+<assign>
+<var>${total after coupon}</var>
+</assign>
+<msg timestamp="20171112 22:18:22.001" level="INFO">${total after coupon} = $3.00</msg>
+<status status="PASS" starttime="20171112 22:18:21.969" endtime="20171112 22:18:22.001"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Total after coupon is: ${total after coupon}</arg>
+<arg>console=true</arg>
+</arguments>
+<msg timestamp="20171112 22:18:22.002" level="INFO">Total after coupon is: $3.00</msg>
+<status status="PASS" starttime="20171112 22:18:22.001" endtime="20171112 22:18:22.002"></status>
+</kw>
+<kw name="Discount Should Be Calculated Correctly" library="demostore.coupons.Coupons">
+<doc>Given the original price and discounted price, this method verifies the given percentage is applied correctly</doc>
+<arguments>
+<arg>${total before coupon}</arg>
+<arg>${total after coupon}</arg>
+<arg>${discount percent}</arg>
+</arguments>
+<msg timestamp="20171112 22:18:22.006" level="FAIL">The discounted price is not correct. Discount percentage: 90%, Original price: $30.0, Expected discounted: $4.0, Actual discounted: $3.0</msg>
+<status status="FAIL" starttime="20171112 22:18:22.003" endtime="20171112 22:18:22.006"></status>
+</kw>
+<status status="FAIL" starttime="20171112 22:18:11.029" endtime="20171112 22:18:22.006" critical="yes">The discounted price is not correct. Discount percentage: 90%, Original price: $30.0, Expected discounted: $4.0, Actual discounted: $3.0</status>
+</test>
+<status status="FAIL" starttime="20171112 22:18:10.733" endtime="20171112 22:18:22.008"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Calculate Discount">Calculate Discount</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

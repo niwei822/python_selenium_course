@@ -1,0 +1,90 @@
+VALID NEW & PENDING TRADES--(Wait for Trigger)
+
+INVH Short $39.52
+Stop Loss $40.52
+Target $35.00
+
+BLUE Long $18.90
+Stop Loss $17.54
+Target $24.00
+
+TGT Short $239.56
+Stop Loss $246.18
+Target $218.00
+
+EGP Short $169.59
+Stop Loss $173.76
+Target $158.00
+
+MAA Short $187.96
+Stop Loss $192.74
+Target $160.00
+
+VVPR Long $6.00
+Stop Loss $5.16
+Target $8.00
+
+AI Long $52.30
+Stop Loss $46.56
+Target $68.00
+
+CTRM Long $2.70
+Stop Loss $2.34
+Target $3.93
+
+LH Short $291.91
+Stop Loss $299.12
+Target $261.00
+
+DDD Long $30.86
+Stop Loss $28.34
+Target $45.00
+
+ARKK Short $115.60
+Stop Loss $119.52
+Target $75.00
+
+SGOC Long $7.00
+Stop Loss $5.44
+Target $12.00
+
+FDVRF Long $2.52
+Stop Loss $1.54
+Target $6.00
+
+AEMD Long $4.46
+Stop Loss $4.02
+Target $6.50
+
+SAGE Long $46.88
+Stop Loss $44.26
+Target $53.00
+
+HIPO long $5.10
+Stop Loss $4.64
+Target $6.45
+
+BBKCF Long $1.06
+Stop Loss $0.84
+Target $1.69
+
+OCGN Long $8.18
+Stop Loss $7.42
+Target $13.00
+
+ICLK Long $6.16
+Stop Loss $5.50
+Target $9.00
+
+PLUG Long $28.40
+Stop Loss $26.66
+Target $45.00
+
+REI Long $2.82
+Stop Loss $2.44
+Target $3.50
+
+PLTR Long $29.20
+Stop Loss $27.66
+Target $34.00
+

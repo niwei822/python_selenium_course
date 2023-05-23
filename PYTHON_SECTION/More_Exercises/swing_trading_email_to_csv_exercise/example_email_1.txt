@@ -1,0 +1,53 @@
+VALID NEW & PENDING TRADES--(Wait for Trigger)
+
+PEP Short $153.68
+Stop Loss $156.98
+Target $146.10
+
+LIN Short $309.97
+Stop Loss $315.82
+Target $282.00
+
+REGN Short $644.64
+Stop Loss $659.77
+Target $539.00
+
+ORI Short $24.84
+Stop Loss $25.60
+Target $22.90
+
+DELL Short $94.16
+Stop Loss $97.19
+Target $90.00
+
+AXP Short $156.80
+Stop Loss $162.16
+Target $148.00
+
+TEAM Short $377.31
+Stop Loss $387.49
+Target $343.00
+
+PANW Short $463.73
+Stop Loss $479.01
+Target $400
+
+HLI Short $88.19
+Stop Loss $91.49
+Target $75.00
+
+BR Short $168.49
+Stop Loss $172.86
+Target $158.00
+
+ZTS Short $205.45
+Stop Loss $210.11
+Target $176.00
+
+LSI Short $125.18
+Stop Loss $129.88
+Target $98.00
+
+CYRN Long $0.6200
+Stop Loss $0.5000
+Target $0.8100

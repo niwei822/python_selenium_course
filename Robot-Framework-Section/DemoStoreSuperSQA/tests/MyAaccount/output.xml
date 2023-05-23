@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Python 3.6.3 on darwin)" generated="20171205 22:03:35.815">
+<suite id="s1" name="Login Negative With Milti Setup Teardown 2" source="/Users/akinfu/Google Drive/PROJECTS/UDEMY/RobotFrameworkQuickStart/RobotCourseFiles/DemoStoreSuperSQA/tests/MyAaccount/login_negative_with_milti_setup_teardown_2.robot">
+<test id="s1-t1" name="Login without username and password should show correct error">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Open browser</arg>
+<arg>about:blank</arg>
+<arg>Chrome</arg>
+<arg>AND</arg>
+<arg>Go to</arg>
+<arg>${my_account_home_url}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20171205 22:03:36.122" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
+<status status="PASS" starttime="20171205 22:03:36.121" endtime="20171205 22:03:39.740"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${my_account_home_url}</arg>
+</arguments>
+<msg timestamp="20171205 22:03:39.742" level="INFO">Opening url 'http://demostore.supersqa.com/my-account/'</msg>
+<status status="PASS" starttime="20171205 22:03:39.742" endtime="20171205 22:03:42.512"></status>
+</kw>
+<status status="PASS" starttime="20171205 22:03:36.120" endtime="20171205 22:03:42.512"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20171205 22:03:42.513" level="INFO">Clicking button 'name=login'.</msg>
+<status status="PASS" starttime="20171205 22:03:42.513" endtime="20171205 22:03:44.016"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${error_msg_box}</arg>
+</arguments>
+<assign>
+<var>${act_msg}</var>
+</assign>
+<msg timestamp="20171205 22:03:44.132" level="INFO">${act_msg} = Error: Username is required.</msg>
+<status status="PASS" starttime="20171205 22:03:44.016" endtime="20171205 22:03:44.133"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${act_msg}</arg>
+<arg>Error: Username is required.</arg>
+</arguments>
+<status status="PASS" starttime="20171205 22:03:44.133" endtime="20171205 22:03:44.134"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20171205 22:03:44.134" endtime="20171205 22:03:44.303"></status>
+</kw>
+<status status="PASS" starttime="20171205 22:03:36.116" endtime="20171205 22:03:44.303" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Login with username but without password should show correct error">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Open browser</arg>
+<arg>about:blank</arg>
+<arg>Chrome</arg>
+<arg>AND</arg>
+<arg>Go to</arg>
+<arg>${my_account_home_url}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20171205 22:03:44.312" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
+<status status="PASS" starttime="20171205 22:03:44.311" endtime="20171205 22:03:48.644"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${my_account_home_url}</arg>
+</arguments>
+<msg timestamp="20171205 22:03:48.647" level="INFO">Opening url 'http://demostore.supersqa.com/my-account/'</msg>
+<status status="PASS" starttime="20171205 22:03:48.646" endtime="20171205 22:03:50.807"></status>
+</kw>
+<status status="PASS" starttime="20171205 22:03:44.310" endtime="20171205 22:03:50.807"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${user_name_field}</arg>
+<arg>fakename</arg>
+</arguments>
+<msg timestamp="20171205 22:03:50.809" level="INFO">Typing text 'fakename' into text field 'id=username'</msg>
+<status status="PASS" starttime="20171205 22:03:50.808" endtime="20171205 22:03:51.369"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20171205 22:03:51.370" level="INFO">Clicking button 'name=login'.</msg>
+<status status="PASS" starttime="20171205 22:03:51.369" endtime="20171205 22:03:52.556"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${error_msg_box}</arg>
+</arguments>
+<assign>
+<var>${err msg}</var>
+</assign>
+<msg timestamp="20171205 22:03:52.806" level="INFO">${err msg} = ERROR: The password field is empty.</msg>
+<status status="PASS" starttime="20171205 22:03:52.557" endtime="20171205 22:03:52.807"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${err msg}</arg>
+<arg>ERROR: The password field is empty.</arg>
+</arguments>
+<status status="PASS" starttime="20171205 22:03:52.807" endtime="20171205 22:03:52.808"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20171205 22:03:52.809" endtime="20171205 22:03:53.005"></status>
+</kw>
+<status status="PASS" starttime="20171205 22:03:44.306" endtime="20171205 22:03:53.006" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Login with invalid username and invalid password should show correct error">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Open browser</arg>
+<arg>about:blank</arg>
+<arg>Chrome</arg>
+<arg>AND</arg>
+<arg>Go to</arg>
+<arg>${my_account_home_url}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20171205 22:03:53.011" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
+<status status="PASS" starttime="20171205 22:03:53.009" endtime="20171205 22:03:57.778"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${my_account_home_url}</arg>
+</arguments>
+<msg timestamp="20171205 22:03:57.780" level="INFO">Opening url 'http://demostore.supersqa.com/my-account/'</msg>
+<status status="PASS" starttime="20171205 22:03:57.779" endtime="20171205 22:03:59.301"></status>
+</kw>
+<status status="PASS" starttime="20171205 22:03:53.008" endtime="20171205 22:03:59.301"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${user_name_field}</arg>
+<arg>fakename</arg>
+</arguments>
+<msg timestamp="20171205 22:03:59.302" level="INFO">Typing text 'fakename' into text field 'id=username'</msg>
+<status status="PASS" starttime="20171205 22:03:59.302" endtime="20171205 22:03:59.901"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passw_field}</arg>
+<arg>fakepassword</arg>
+</arguments>
+<msg timestamp="20171205 22:03:59.903" level="INFO">Typing text 'fakepassword' into text field 'id=password'</msg>
+<status status="PASS" starttime="20171205 22:03:59.902" endtime="20171205 22:04:00.167"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20171205 22:04:00.169" level="INFO">Clicking button 'name=login'.</msg>
+<status status="PASS" starttime="20171205 22:04:00.168" endtime="20171205 22:04:01.257"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${error_msg_box}</arg>
+</arguments>
+<assign>
+<var>${err msg}</var>
+</assign>
+<msg timestamp="20171205 22:04:01.454" level="INFO">${err msg} = ERROR: Invalid username. Lost your password?</msg>
+<status status="PASS" starttime="20171205 22:04:01.258" endtime="20171205 22:04:01.454"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${err msg}</arg>
+<arg>ERROR: Invalid username. Lost your password?</arg>
+</arguments>
+<status status="PASS" starttime="20171205 22:04:01.454" endtime="20171205 22:04:01.454"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20171205 22:04:01.455" endtime="20171205 22:04:01.613"></status>
+</kw>
+<status status="PASS" starttime="20171205 22:03:53.006" endtime="20171205 22:04:01.613" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20171205 22:03:35.818" endtime="20171205 22:04:01.617"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Login Negative With Milti Setup Teardown 2">Login Negative With Milti Setup Teardown 2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

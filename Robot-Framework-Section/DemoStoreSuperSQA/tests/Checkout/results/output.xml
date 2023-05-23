@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Python 3.6.3 on darwin)" generated="20171125 14:58:04.601">
+<suite id="s1" name="Returning User Reminder Clean" source="/Users/akinfu/Google Drive/PROJECTS/UDEMY/RobotFrameworkQuickStart/RobotCourseFiles/DemoStoreSuperSQA/tests/Checkout/returning_user_reminder_clean.robot">
+<test id="s1-t1" name="Checkout page should prompt returning users to login">
+<kw name="Go to home page" library="checkout_page_resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>Firefox</arg>
+</arguments>
+<msg timestamp="20171125 14:58:04.879" level="INFO">Opening browser 'Firefox' to base url 'about:blank'</msg>
+<status status="PASS" starttime="20171125 14:58:04.879" endtime="20171125 14:58:12.094"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${homepage}</arg>
+</arguments>
+<msg timestamp="20171125 14:58:12.097" level="INFO">Opening url 'http://demostore.supersqa.com'</msg>
+<status status="PASS" starttime="20171125 14:58:12.095" endtime="20171125 14:58:16.964"></status>
+</kw>
+<status status="PASS" starttime="20171125 14:58:04.878" endtime="20171125 14:58:16.964"></status>
+</kw>
+<kw name="Add item to cart and navigate to checkout" library="checkout_page_resources">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${first item locator}</arg>
+</arguments>
+<msg timestamp="20171125 14:58:16.966" level="INFO">Clicking link 'xpath=//*[@id="main"]/div[2]/ul/li[1]/a[2]'.</msg>
+<status status="PASS" starttime="20171125 14:58:16.966" endtime="20171125 14:58:17.579"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20171125 14:58:18.588" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20171125 14:58:17.583" endtime="20171125 14:58:18.589"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${cart button locator}</arg>
+</arguments>
+<msg timestamp="20171125 14:58:18.589" level="INFO">Clicking link 'xpath=//*[@id="menu-item-159"]/a'.</msg>
+<status status="PASS" starttime="20171125 14:58:18.589" endtime="20171125 14:58:20.693"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${checkout button locator}</arg>
+</arguments>
+<msg timestamp="20171125 14:58:20.694" level="INFO">Clicking link 'xpath=//*[@id="post-71"]/div/div/div/div/div/a'.</msg>
+<status status="PASS" starttime="20171125 14:58:20.693" endtime="20171125 14:58:25.252"></status>
+</kw>
+<status status="PASS" starttime="20171125 14:58:16.965" endtime="20171125 14:58:25.253"></status>
+</kw>
+<kw name="Notice for returning user to log in should be displayed" library="checkout_page_resources">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${login notice locator}</arg>
+</arguments>
+<assign>
+<var>${login notice text}</var>
+</assign>
+<msg timestamp="20171125 14:58:25.336" level="INFO">${login notice text} = Returning customer? Click here to login</msg>
+<status status="PASS" starttime="20171125 14:58:25.256" endtime="20171125 14:58:25.336"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${login notice text}</arg>
+<arg>Returning customer? Click here to login</arg>
+</arguments>
+<status status="PASS" starttime="20171125 14:58:25.336" endtime="20171125 14:58:25.337"></status>
+</kw>
+<status status="PASS" starttime="20171125 14:58:25.254" endtime="20171125 14:58:25.338"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20171125 14:58:25.338" endtime="20171125 14:58:25.920"></status>
+</kw>
+<status status="PASS" starttime="20171125 14:58:04.877" endtime="20171125 14:58:25.920" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20171125 14:58:04.604" endtime="20171125 14:58:25.923"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Returning User Reminder Clean">Returning User Reminder Clean</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

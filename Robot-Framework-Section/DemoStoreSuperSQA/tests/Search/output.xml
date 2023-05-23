@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Python 3.6.3 on darwin)" generated="20171107 21:29:59.259">
+<suite id="s1" name="Search" source="/Users/akinfu/Google Drive/PROJECTS/UDEMY/RobotFrameworkQuickStart/RobotCourseFiles/DemoStoreSuperSQA/tests/Search/search.robot">
+<test id="s1-t1" name="User should be able to search for an existing product">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20171107 21:29:59.526" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
+<status status="PASS" starttime="20171107 21:29:59.526" endtime="20171107 21:30:04.777"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${HOME PAGE URL}</arg>
+</arguments>
+<msg timestamp="20171107 21:30:04.783" level="INFO">Opening url 'http://demostore.supersqa.com'</msg>
+<status status="PASS" starttime="20171107 21:30:04.778" endtime="20171107 21:30:07.560"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH FIELD ID}</arg>
+<arg>${EXISTING ITEM SEARCH TERM}</arg>
+</arguments>
+<msg timestamp="20171107 21:30:07.561" level="INFO">Typing text 'Flying Ninja' into text field 'woocommerce-product-search-field-0'</msg>
+<status status="PASS" starttime="20171107 21:30:07.560" endtime="20171107 21:30:08.087"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH FIELD ID}</arg>
+<arg>${ASCI CODE FOR ENTER}</arg>
+</arguments>
+<status status="PASS" starttime="20171107 21:30:08.088" endtime="20171107 21:30:09.415"></status>
+</kw>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains `expected`.</doc>
+<arguments>
+<arg>${EXPECTED URL TEXT}</arg>
+</arguments>
+<msg timestamp="20171107 21:30:09.442" level="INFO">Current location contains '/product/flying-ninja/'.</msg>
+<status status="PASS" starttime="20171107 21:30:09.416" endtime="20171107 21:30:09.442"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20171107 21:30:09.443" endtime="20171107 21:30:09.601"></status>
+</kw>
+<status status="PASS" starttime="20171107 21:29:59.525" endtime="20171107 21:30:09.602" critical="yes"></status>
+</test>
+<test id="s1-t2" name="User should see correct message when searching none existing item">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20171107 21:30:09.613" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
+<status status="PASS" starttime="20171107 21:30:09.612" endtime="20171107 21:30:14.013"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${HOME PAGE URL}</arg>
+</arguments>
+<msg timestamp="20171107 21:30:14.015" level="INFO">Opening url 'http://demostore.supersqa.com'</msg>
+<status status="PASS" starttime="20171107 21:30:14.013" endtime="20171107 21:30:16.812"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH FIELD ID}</arg>
+<arg>abc</arg>
+</arguments>
+<msg timestamp="20171107 21:30:16.813" level="INFO">Typing text 'abc' into text field 'woocommerce-product-search-field-0'</msg>
+<status status="PASS" starttime="20171107 21:30:16.812" endtime="20171107 21:30:17.217"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH FIELD ID}</arg>
+<arg>${ASCI CODE FOR ENTER}</arg>
+</arguments>
+<status status="PASS" starttime="20171107 21:30:17.217" endtime="20171107 21:30:17.848"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>class=${MSG BOX CLASS}</arg>
+<arg>${NOT FOUND MSG}</arg>
+</arguments>
+<msg timestamp="20171107 21:30:17.850" level="INFO">Verifying element 'class=woocommerce-info' contains exactly text 'No products were found matching your selection.'.</msg>
+<status status="PASS" starttime="20171107 21:30:17.849" endtime="20171107 21:30:18.006"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20171107 21:30:18.007" endtime="20171107 21:30:18.165"></status>
+</kw>
+<status status="PASS" starttime="20171107 21:30:09.611" endtime="20171107 21:30:18.167" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20171107 21:29:59.267" endtime="20171107 21:30:18.171"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Search">Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
